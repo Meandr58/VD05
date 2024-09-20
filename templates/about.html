@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    О проекте
+{% endblock %}
+
+{% block content %}
+   <div class="container mt-5">
+    <h1>{{ caption }}</h1>
+
+    <p>Этот сайт был создан с целью тестирования возможностей Flask и Bootstrap для разработки веб-приложений. Мы используем данные технологии для простоты создания веб-интерфейсов.</p>
+    <p>На этой странице вы можете ознакомиться с тем, как выглядят страницы нашего тестового сайта.</p>
+    <p>Перейдите на <a href="/">домашнюю страницу</a>, чтобы узнать больше.</p>
+
+    <a href="/" class="btn btn-primary mt-4">{{ link }}</a>
+
+    <!-- Добавление крупного фото -->
+    <div class="mt-5">
+        <img src="{{ url_for('static', filename='image/about.jpg') }}" alt="Крупное изображение" class="img-fluid rounded">
+
+    </div>
+    <p> </p>
+    <p> </p>
+</div>
+
+
+
+{% endblock %}

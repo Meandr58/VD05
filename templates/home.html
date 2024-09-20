@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Добро пожаловать на домашнюю страницу!
+{% endblock %}
+
+{% block content %}
+    <!-- Основное содержимое страницы -->
+<div class="container mt-5">
+    <h1>{{ caption }}</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <p>Добро пожаловать на наш тестовый сайт! Здесь вы можете узнать много полезной информации о различных темах.</p>
+            <p>Этот сайт создан с использованием Flask и Bootstrap, чтобы продемонстрировать, как легко можно разрабатывать веб-приложения с помощью современных технологий.</p>
+            <p>Изучите наши страницы и узнайте, как можно использовать Flask для построения своих собственных проектов.</p>
+        </div>
+        <div class="col-md-4">
+            <!-- Добавляем фото -->
+            <img src="{{ url_for('static', filename='image/test.jpg') }}" alt="Placeholder Image" class="img-fluid rounded">
+        </div>
+    </div>
+
+    <a href="/about/" class="btn btn-primary mt-4">{{ link }}</a>
+</div>
+
+
+</body>
+</html>
+
+{% endblock %}
